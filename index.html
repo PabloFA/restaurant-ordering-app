@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Ordering App</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="col">
+            <h1>Would you like to take an Hamburger?</h1>
+          </div>
+          <div class="col">
+            <img class="hero-img" src="Image/hamburger.png" alt="" />
+          </div>
+        </div>
+        <div class="slider">
+          <div class="filter-food active-filter">
+            <img
+              class="filter-icon"
+              src="Image/happy emoji.png"
+              alt=""
+            />
+            <p>All</p>
+          </div>
+          <div class="filter-food">
+            <img
+              class="filter-icon"
+              src="Image/hamburger emoji.png"
+              alt=""
+            />
+            <p>Hamburger</p>
+          </div>
+          <div class="filter-food">
+            <img
+              class="filter-icon"
+              src="Image/pizza emoji.png"
+              alt=""
+            />
+            <p>Pizza</p>
+          </div>
+        </div>
+        <div class="item-list" id="item-list"></div>
+
+        <section class="menu">
+          <i class="fa-solid fa-house icon"></i>
+          <a class="btn-order" href="#" id="openOrder">My Order</a>
+          <img class="home-img" src="Image/user.png" alt="" />
+        </section>
+      </div>
+
+      <!-- START ORDER POPUP-->
+      <div class="order-popup" id="order-popup">
+        <div class="order-content">
+          <div class="title">
+            <a class="backBtn" id="closeOrder" href="#">
+              <i class="fa-solid fa-angle-left icon"></i>
+            </a>
+            <h1>My Order</h1>
+          </div>
+          <div class="menu-order" id="menu-order"></div>
+
+          <!-- DISCOUNT TEXT -->
+
+          <div class="discount-input">
+            <input
+              type="text"
+              placeholder="Discount Code?"
+              id="discount-input"
+            />
+            <a class="backBtn orange" id="discount-btn" href="#">
+              <i class="fa-solid fa-angle-right icon"></i>
+            </a>
+          </div>
+
+          <div class="row">
+            <div>
+              <p class="price" id="totalPrice"></p>
+              <p class="item-ingredients">Total Price</p>
+            </div>
+            <a class="btn-order" href="#" id="completeOrder"
+              >Complete Order</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- END ORDER POPUP-->
+
+      <!-- START CREDIT CARD POPUP-->
+      <div class="card-details" id="card-details">
+        <div class="card-content">
+          <h1>Enter card details</h1>
+          <form class="form">
+            <input
+              class="input-card"
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              id="name"
+              required
+            />
+            <input
+              class="input-card"
+              type="text"
+              placeholder="Enter card number"
+              name="cardNum"
+              id="cardNum"
+              required
+            />
+            <input
+              class="input-card"
+              type="text"
+              placeholder="Enter CVV"
+              name="cvv"
+              id="cvv"
+              required
+            />
+            <input
+              type="submit"
+              value="Pay"
+              id="payBtn"
+              class="payBtn"
+            />
+          </form>
+        </div>
+      </div>
+      <!-- END CREDIT CARD POPUP-->
+
+      <!-- START FINAL DETAILS POPUP-->
+      <div class="order-popup" id="final-popup">
+        <div class="order-content">
+          <div class="message">
+            <p>Thanks, Pablo! Your order is on its way</p>
+          </div>
+
+          <h1>Order Details</h1>
+
+          <div class="menu-order" id="order-details"></div>
+          <div class="row">
+            <h2>Total Price</h2>
+            <p class="price" id="finalPrice">32</p>
+          </div>
+          <div class="col review">
+            <h1>¿How was your experience?</h1>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <a class="btn-order black" href="#" id="new-order"
+            >New Order</a
+          >
+        </div>
+      </div>
+      <!-- END FINAL DETAILS POPUP-->
+    </main>
+    <script src="index.js" type="module" defer></script>
+    >
+  </body>
+</html>
